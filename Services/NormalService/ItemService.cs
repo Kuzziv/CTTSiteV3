@@ -18,6 +18,11 @@ namespace CTTSite.Services.NormalService
             Items = GetAllItemsAsync().Result;
         }
 
+        public ItemService()
+        {
+            
+        }
+
         public async Task<List<Item>> GetAllItemsAsync()
         {
             return (await _dBServiceGeneric.GetObjectsAsync()).ToList();
